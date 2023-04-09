@@ -1,0 +1,102 @@
+:root {
+  --face-color: whitesmoke;
+  --face-height: 100vh;
+  --face-width: 100vw;
+  --eye-size: 29.70vmin;
+  --eye-color: black;
+  --mouth-color: black;
+  --eyelid-color: black;
+}
+
+body {
+  background-color: white;
+  margin: 0px;
+}
+
+.buttons {
+  position: relative;
+  z-index: 3;
+}
+
+.face {
+  background-color: var(--face-color);
+  margin: auto;
+  height: var(--face-height);
+  width: var(--face-width);
+  position: relative;
+  overflow: hidden;
+}
+
+.face div {
+  position: absolute;
+}
+
+.mouthleft {
+  background-color: var(--mouth-color);
+  width: 225px;
+  height: 70px;
+  position : relative;
+  top:450px;
+  left: 450px;
+  transform: rotateX(0);
+}
+
+.mouthright {
+  background-color: var(--mouth-color);
+  width: 225px;
+  height: 70px;
+  position : relative;
+  top: 450px;
+  left: 825px;
+  transform: rotateX(0);
+}
+
+.mouthmidle {
+  background-color: var(--mouth-color);
+  width: 200px;
+  height: 70px;
+  position : relative;
+  top:450px;
+  left: 650px;
+  transform: rotateX(0);
+}
+.eye {
+  background-color: var(--eye-color);
+  border-radius: 100%;
+  height: var(--eye-size);
+  width: var(--eye-size);
+  bottom: calc(var(--eye-size) + 170px);
+  z-index: 1;
+  transform: rotateX(0);
+}
+
+.eye.left {
+  left: calc(var(--eye-size));
+}
+
+.eye.right {
+  right: calc(var(--eye-size));
+}
+
+.eyelid {
+  background-color: var(--eyelid-color);
+  height: var(--eye-size);
+  width: calc(var(--eye-size) * 1.75);
+  z-index: 2;
+  transform: rotate(0deg);
+}
+
+.eyelid.upper {
+  bottom: calc(var(--eye-size));
+  left: calc(var(--eye-size) * -0.375);
+  height : 80px;
+}
+
+.eyelid.lower {
+  border-radius: 150%;
+  height : 90px;
+  width: 300px;
+  background-color: whitesmoke;
+  bottom: calc(var(--eye-size) * -0.50);
+  left: calc(var(--eye-size) * -0.245);
+}
